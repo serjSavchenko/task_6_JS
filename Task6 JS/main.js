@@ -312,9 +312,9 @@ document.body.onload = function() {
 
                 main_div.style.flexDirection = "row";
                 main_div.insertAdjacentHTML('afterbegin', '<div class="element-cell"><img src="'+pizzas[i].src+'" alt="pizza">'+
-                '<h3>'+ pizzas[i].name +'</h3>'+
+                '<h2><i>'+ pizzas[i].name +'</i></h2>'+
                 '<h4 id="composition"></h4>'+
-                '<h4>'+ pizzas[i].calories +' kkal</h4>'+
+                '<h3>'+ pizzas[i].calories +' kkal</h3>'+
                 '<strong>'+ pizzas[i].price +' &#8372;</strong></div>');
                 let headerCompose = document.getElementById("composition");
                 headerCompose.insertAdjacentElement("afterbegin", div_compose);
@@ -338,12 +338,6 @@ document.body.onload = function() {
                         let id_parag = paragraph.getAttribute("id");
                         let attr = id_parag.split('_');
                         let temp_index = 0;
-
-                        if (this.classList) {
-                            this.classList.toggle("active");
-                        }
-                        console.log(this);
-
                         
                         for (let i = 0; i < pizzas.length; i++) {
                             if(pizzas[i].name == attr[0]){
@@ -367,9 +361,9 @@ document.body.onload = function() {
 
                 main_div.style.flexDirection = "row";
                 main_div.insertAdjacentHTML('afterbegin', '<div class="element-cell"><img src="'+pizzas[i].src+'" alt="pizza">'+
-                '<h3>'+ pizzas[i].name +'</h3>'+
+                '<h2><i>'+ pizzas[i].name +'</i></h2>'+
                 '<h4 id="composition"></h4>'+
-                '<h4>'+ pizzas[i].calories +' kkal</h4>'+
+                '<h3>'+ pizzas[i].calories +' kkal</h3>'+
                 '<strong>'+ pizzas[i].price +' &#8372;</strong></div>');
                 let headerCompose = document.getElementById("composition");
                 headerCompose.insertAdjacentElement("afterbegin", div_compose);
@@ -402,7 +396,7 @@ document.body.onload = function() {
             {
                 main_div.style.flexDirection = "column";
                 main_div.insertAdjacentHTML('afterbegin', '<div class="element-list"><img src="img\\pizza.svg" alt="pizza">'+
-                '<h3>'+ pizzas[i].name +'</h3>'+
+                '<h2>'+ pizzas[i].name +'</h2>'+
                 '<h4>'+ pizzas[i].calories +' kkal</h4>'+
                 '<strong>'+ pizzas[i].price +' &#8372;</strong></div>')
             }
@@ -413,7 +407,7 @@ document.body.onload = function() {
             {
                 main_div.style.flexDirection = "column";
                 main_div.insertAdjacentHTML('afterbegin', '<div class="element-list"><img src="img\\pizza.svg" alt="pizza">'+
-                '<h3>'+ pizzas[i].name +'</h3>'+
+                '<h2>'+ pizzas[i].name +'</h2>'+
                 '<h4>'+ pizzas[i].calories +' kkal</h4>'+
                 '<strong>'+ pizzas[i].price +' &#8372;</strong></div>')
             }
